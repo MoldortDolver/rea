@@ -7,6 +7,10 @@
 [submodule "third_party/unblob"]
 	path = third_party/unblob
 	url = https://github.com/onekey-sec/unblob.git
+	# Fork change: skipped by default so the repo clones on Windows. unblob's tests/
+	# folder contains file names Windows cannot store. To fetch it on Linux/macOS:
+	#   git submodule update --init --checkout third_party/unblob
+	update = none
 [submodule "third_party/ghidra-nativeaot"]
 	path = third_party/ghidra-nativeaot
 	url = https://github.com/Washi1337/ghidra-nativeaot.git
